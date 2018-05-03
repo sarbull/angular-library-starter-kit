@@ -1,0 +1,50 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource" class="example-table rest-grid">
+    <ng-container *ngFor="let column of displayedColumns;" matColumnDef="{{ column }}">
+      <mat-header-cell *matHeaderCellDef>
+        <span>{{ column.toLocaleUpperCase() }}</span>
+
+        <span *ngIf="column !== 'actions'">
+          <button mat-button (click)="triggerSort(column)" *ngIf="columns[column].sort">
+            <mat-icon *ngIf="!isInAsc(column) && !isInDesc(column)">sort</mat-icon>
+            <mat-icon *ngIf="isInAsc(column)">arrow_upward</mat-icon>
+            <mat-icon *ngIf="isInDesc(column)">arrow_downward</mat-icon>
+          </button>
+
+          <rg-contextual-menu  *ngIf="columns[column].filter">
+            <rg-date-filter *ngIf="columns[column].type === 'date'" [entity]="columns[column]" (notify)="handleFilter($event)"></rg-date-filter>
+            <rg-number-filter *ngIf="columns[column].type === 'number'" [entity]="columns[column]" (notify)="handleFilter($event)"></rg-number-filter>
+            <rg-string-filter *ngIf="columns[column].type === 'string'" [entity]="columns[column]" (notify)="handleFilter($event)"></rg-string-filter>
+          </rg-contextual-menu>
+        </span>
+      </mat-header-cell>
+
+      <mat-cell *matCellDef="let row;">
+        <span *ngIf="columns[column].type === 'string'">{{ row[column] }}</span>
+        <span *ngIf="columns[column].type === 'number'">{{ row[column] }}</span>
+        <span *ngIf="columns[column].type === 'date'">{{ row[column] | date }}</span>
+
+        <div *ngIf="columns[column].type === 'action'">
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>arrow_drop_down_circle</mat-icon>
+          </button>
+
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item *ngFor="let menuItem of actions" (click)="triggerAction(menuItem, row)">
+              {{ menuItem }}
+            </button>
+          </mat-menu>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator [length]="resultsLength" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

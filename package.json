@@ -10,7 +10,7 @@
   "license": "MIT",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ng serve --aot",
+    "start": "ng serve --aot --open --proxy-config proxy.conf.json",
     "build": "ng-packagr -p ng-package.json",
     "build-ghpages": "ng build --base-href \"https://sarbull.github.io/rest-grid-library/\" --output-path \"dist-ghpages\"",
     "test": "npm run lint && ng test --watch false",
@@ -38,10 +38,20 @@
   "private": false,
   "peerDependencies": {
     "@angular/common": "^5.0.0",
-    "@angular/core": "^5.0.0"
+    "@angular/core": "^5.0.0",
+    "@angular/material": "^5.0.0",
+    "@angular/cdk": "^5.0.0",
+    "material-design-icons": "^3.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@angular/common": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/material": "^5.0.0",
+    "@angular/cdk": "^5.0.0",
+    "material-design-icons": "^3.0.0"
+  },
   "devDependencies": {
+    "@angular-devkit/core": "^0.5.13",
     "@angular/animations": "^5.0.0",
     "@angular/cli": "1.5.4",
     "@angular/common": "^5.0.0",

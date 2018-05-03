@@ -1,0 +1,22 @@
+<mat-card class="rg-column">
+  <mat-form-field>
+    <input matInput [(ngModel)]="fromDate" [matDatepicker]="from" readonly placeholder="From">
+
+    <mat-datepicker-toggle matSuffix [for]="from"></mat-datepicker-toggle>
+    <mat-datepicker #from></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="toDate" [matDatepicker]="to" readonly placeholder="To">
+
+    <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+    <mat-datepicker #to></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-button (click)="submit()">
+    <mat-icon>done</mat-icon>
+  </button>
+  <button mat-button (click)="clear()">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-card>

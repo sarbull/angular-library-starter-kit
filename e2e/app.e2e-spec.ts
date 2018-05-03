@@ -8,7 +8,7 @@ describe('App', () => {
     page.navigateTo();
   });
 
-  it('should display "<Rest Grid Library>"', () => {
-    expect(page.getTitleText()).toContain('<Rest Grid Library>');
+  it('should display "Rest Grid Library"', () => {
+    expect(page.getTitleText()).toContain('Rest Grid Library');
   });
 });

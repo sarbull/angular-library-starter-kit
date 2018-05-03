@@ -1,5 +1,4 @@
-<div class="greetings center">
-  <div>
-    <h1>{{ 'Rest Grid Library' | taggify }}</h1>
-  </div>
-</div>
+<h1>{{ 'Rest Grid Library' }}</h1>
+
+
+<rg-rest-grid [endpoint]="endpoint" (onActionClick)="onActionClick($event)"></rg-rest-grid>
