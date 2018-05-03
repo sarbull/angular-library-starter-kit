@@ -8,7 +8,7 @@ describe('App', () => {
     page.navigateTo();
   });
 
-  it('should display "<Angular 5 Library Starter Kit>"', () => {
-    expect(page.getTitleText()).toContain('<Angular 5 Library Starter Kit>');
+  it('should display "<Rest Grid Library>"', () => {
+    expect(page.getTitleText()).toContain('<Rest Grid Library>');
   });
 });
