@@ -17,9 +17,9 @@ import {
   MatSelectModule, MatButtonModule
 } from '@angular/material';
 
-import {NumberFilter} from './filters/number/number.filter';
-import {DateFilter} from './filters/date/date.filter';
-import {StringFilter} from './filters/string/string.filter';
+import {NumberFilterComponent} from './filters/number/number-filter.component';
+import {DateFilterComponent} from './filters/date/date-filter.component';
+import {StringFilterComponent} from './filters/string/string-filter.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ContextualMenuModule} from './contextual-menu/contextual-menu.module';
@@ -28,9 +28,9 @@ import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     RestGridComponent,
-    NumberFilter,
-    DateFilter,
-    StringFilter
+    NumberFilterComponent,
+    DateFilterComponent,
+    StringFilterComponent
   ],
   imports: [
     ContextualMenuModule,

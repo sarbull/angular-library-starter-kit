@@ -2,10 +2,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'rg-number-filter',
-  styleUrls: ['./number.filter.css'],
-  templateUrl: 'number.filter.html',
+  styleUrls: ['./number-filter.component.css'],
+  templateUrl: 'number-filter.component.html',
 })
-export class NumberFilter {
+export class NumberFilterComponent {
   @Input() entity;
   @Output() notify: EventEmitter<Array<Object>> = new EventEmitter<Array<Object>>();
 

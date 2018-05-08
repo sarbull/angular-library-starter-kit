@@ -2,10 +2,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'rg-date-filter',
-  styleUrls: ['./date.filter.css'],
-  templateUrl: 'date.filter.html',
+  styleUrls: ['./date-filter.component.css'],
+  templateUrl: 'date-filter.component.html',
 })
-export class DateFilter {
+export class DateFilterComponent {
   @Input() entity;
   @Output() notify: EventEmitter<Array<Object>> = new EventEmitter<Array<Object>>();
 

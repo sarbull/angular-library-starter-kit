@@ -2,10 +2,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'rg-string-filter',
-  styleUrls: ['./string.filter.css'],
-  templateUrl: 'string.filter.html',
+  styleUrls: ['./string-filter.component.css'],
+  templateUrl: 'string-filter.component.html',
 })
-export class StringFilter {
+export class StringFilterComponent {
   @Input() entity;
   @Output() notify: EventEmitter<Array<Object>> = new EventEmitter<Array<Object>>();
 
