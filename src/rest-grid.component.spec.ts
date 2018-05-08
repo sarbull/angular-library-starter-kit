@@ -8,7 +8,7 @@ import {
 } from '@angular/common/http/testing';
 import {RestGridComponent} from './rest-grid.component';
 
-describe('RestGridDataService', () => {
+describe('RestGridComponent', () => {
   let component: RestGridComponent;
   let injector: TestBed;
   let httpMock: HttpTestingController;
