@@ -1,5 +1,5 @@
 {
-  "name": "rest-grid-library",
+  "name": "rest-grid",
   "version": "0.1.1",
   "private": false,
   "description": "Rest Grid Library",
@@ -11,9 +11,9 @@
     "starter",
     "typescript"
   ],
-  "homepage": "https://github.com/sarbull/rest-grid-library#readme",
+  "homepage": "https://github.com/sarbull/rest-grid#readme",
   "bugs": {
-    "url": "https://github.com/sarbull/rest-grid-library/issues"
+    "url": "https://github.com/sarbull/rest-grid/issues"
   },
   "license": "MIT",
   "author": {
@@ -24,12 +24,12 @@
   "main": "src/index.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sarbull/rest-grid-library.git"
+    "url": "git+https://github.com/sarbull/rest-grid.git"
   },
   "scripts": {
     "build": "ng-packagr -p ng-package.json",
     "postbuild": "node copy.js",
-    "build-ghpages": "ng build --base-href \"https://sarbull.github.io/rest-grid-library/\" --output-path \"dist-ghpages\"",
+    "build-ghpages": "ng build --base-href \"https://sarbull.github.io/rest-grid/\" --output-path \"dist-ghpages\"",
     "e2e": "ng e2e",
     "e2e-watch": "watch \"ng e2e -s false\" src e2e --wait=1",
     "lint": "ng lint",
