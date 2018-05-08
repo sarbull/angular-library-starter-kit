@@ -1,0 +1,38 @@
+{
+  "actions": [
+    "EDIT_ACTION",
+    "DELETE_ACTION"
+  ],
+  "columns": [
+    {
+      "name": "position",
+      "type": "number",
+      "filter": true,
+      "sort": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "filter": true,
+      "sort": true
+    },
+    {
+      "name": "createdAt",
+      "type": "date",
+      "filter": true,
+      "sort": true
+    },
+    {
+      "name": "weight",
+      "type": "number",
+      "filter": true,
+      "sort": true
+    },
+    {
+      "name": "symbol",
+      "type": "string",
+      "filter": true,
+      "sort": true
+    }
+  ]
+}
